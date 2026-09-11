@@ -1,64 +1,64 @@
-# Derece Dönüşüm Uygulaması
+# derece-donusum
 
-Kullanıcıdan girilen bir dereceyi Celsius'tan Fahrenhayt'a veya Fahrenhayt'tan Celsius'a çeviren, saf HTML, CSS ve JavaScript ile geliştirilmiş basit bir web uygulaması.
+## Video
 
-## Demo
+<video src="https://github.com/user-attachments/assets/8b7c30cd-c9d1-4ba2-a066-3134145b718b" controls muted width="600"></video>
 
-https://github.com/user-attachments/assets/8b7c30cd-c9d1-4ba2-a066-3134145b718b
+## Bu projede neler öğrendim?
 
-## Özellikler
+- `function isim(parametre) { return ...; }` şeklinde, kendi isimlendirdiğim fonksiyonları tanımlamayı ve `return` ile bir değer döndürmeyi öğrendim.
+- Celsius-Fahrenheit dönüşüm formüllerini (`(derece × 9/5) + 32` ve `(derece − 32) × 5/9`) ayrı, tekrar kullanılabilir fonksiyonlar haline getirmeyi öğrendim.
+- Kullanıcının **en son hangi butona bastığını** ayrı bir değişkende (`sonSecilenYon`) saklayıp, bu bilgiyi daha sonra (Enter tuşuna basıldığında) tekrar kullanmayı öğrendim.
+- `addEventListener("keydown", ...)` ile klavye tuşlarını dinlemeyi, ve `event.key === "Enter"` ile hangi tuşa basıldığını kontrol etmeyi öğrendim.
+- Bir butona **kod içinden**, kullanıcı tıklamadan, `buton.click()` ile "tıklanmış gibi" davranmasını sağlamayı öğrendim — böylece Enter tuşu, mevcut buton mantığını tekrar yazmadan tetikleyebiliyor.
+- Girdi kontrolü (boş mu değil mi) yapıp, hem `alert` ile kullanıcıyı uyarmayı hem de sonuç alanını temizlemeyi öğrendim.
+- İşlem tamamlandıktan sonra input'u otomatik temizlemeyi ve sonucu hem ekrana (`textContent`) hem konsola yazdırmayı pekiştirdim.
 
-- **Celsius → Fahrenhayt** ve **Fahrenhayt → Celsius** dönüşümü
-- Sonucun hem **konsola** hem de **ekrana** yazdırılması
-- Boş girdi kontrolü (kullanıcı değer girmeden butona basarsa uyarı gösterilir)
-- **Enter tuşu desteği** — kullanıcının en son seçtiği dönüşüm yönüne göre işlemi tekrar tetikler
-- Dönüşüm sonrası input alanının otomatik temizlenmesi
+## Kullanılan teknolojiler
 
-## Kullanılan Teknolojiler
+| Teknoloji | Amaç |
+| --- | --- |
+| HTML5 | Sayfa yapısı ve form elemanları |
+| JavaScript (vanilla) | Derece dönüşüm mantığı, klavye/tıklama olayları, girdi kontrolü |
 
-- HTML5
-- Vanilla JavaScript (herhangi bir framework/kütüphane kullanılmadı)
+## Klasör yapısı
 
-## Proje Yapısı
+    js-derece-donusum/
+    ├── assets/
+    │   └── donusum.mp4
+    ├── derece-donusum.js
+    ├── index.html
+    └── readme.md
 
-```
-js-derece-donusum/
-├── index.html          # Uygulamanın arayüzü (input, butonlar, sonuç alanı)
-├── derece-donusum.js   # Dönüşüm mantığı ve DOM etkileşimleri
-└── README.md
-```
+## English
 
-## Nasıl Çalışır
+## Demo Video
 
-1. `index.html` dosyasını bir tarayıcıda açın.
-2. Input alanına bir derece değeri girin.
-3. `C -> F` veya `F -> C` butonuna tıklayın (ya da daha önce tıkladığınız yönü tekrar kullanmak için `Enter` tuşuna basın).
-4. Sonuç hem ekranda hem de tarayıcı konsolunda (F12 → Console) görüntülenir.
+<video src="https://github.com/user-attachments/assets/8b7c30cd-c9d1-4ba2-a066-3134145b718b" controls muted width="600"></video>
 
-## Öğrenilen / Uygulanan JavaScript Kavramları
+## What did I learn in this project?
 
-- `document.getElementById` ile DOM elementlerine erişim
-- `const` / `let` kullanım ayrımı (değişmeyen referanslar vs. değişen değerler)
-- `addEventListener` ile click ve keydown event yönetimi
-- Fonksiyonlarla kodun modüler hale getirilmesi (`celciusToFahrenhayt`, `fahrenhaytToCelcius`)
-- String'den sayıya dönüşüm (`Number()`)
-- `if-else` ile girdi doğrulama (validation)
-- `.textContent` ile DOM içeriğini güncelleme
-- Programatik olarak `.click()` metodu ile event tetikleme
+- I learned how to define my own named functions using `function name(parameter) { return ...; }`, and how to return a value with `return`.
+- I turned the Celsius-Fahrenheit conversion formulas (`(degree × 9/5) + 32` and `(degree − 32) × 5/9`) into separate, reusable functions.
+- I learned how to store which button the user pressed most recently in a separate variable (`sonSecilenYon`), and reuse that information later (when the Enter key is pressed).
+- I learned how to listen for keyboard input using `addEventListener("keydown", ...)`, and check which key was pressed with `event.key === "Enter"`.
+- I learned how to trigger a button "as if it was clicked" from within the code, using `button.click()` — this lets the Enter key reuse the existing button logic without duplicating it.
+- I practiced input validation (checking for empty input), warning the user with `alert`, and clearing the result area when needed.
+- I reinforced clearing the input automatically after a successful operation, and displaying the result both on the page (`textContent`) and in the console.
 
-## Geliştirme Süreci
+## Technologies used
 
-Proje, farklı git branch'leri üzerinde adım adım geliştirilmiştir:
-- Buton ve input elementlerinin tanımlanması
-- Dönüşüm fonksiyonlarının yazılması
-- Event listener'ların bağlanması ve test edilmesi
-- Girdi doğrulama (boş değer kontrolü) eklenmesi
-- Ekrana sonuç yazdırma özelliğinin eklenmesi
-- Enter tuşu desteğinin eklenmesi
+| Technology | Purpose |
+| --- | --- |
+| HTML5 | Page structure and form elements |
+| JavaScript (vanilla) | Temperature conversion logic, keyboard/click events, input validation |
 
-## Olası Geliştirmeler
+## Folder structure
 
-- Ondalıklı sonuçların yuvarlanması (örn. `toFixed(2)`)
-- Negatif mutlak sıfır altı değerler için ek doğrulama
-- Basit bir CSS ile arayüzün görsel olarak geliştirilmesi
-- Dönüşüm geçmişinin listelenmesi
+    js-derece-donusum/
+    ├── assets/
+    │   └── donusum.mp4
+    ├── derece-donusum.js
+    ├── index.html
+    └── readme.md
+    
